@@ -1,0 +1,203 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks' 
+
+<Meta title="Typography" />
+
+export const typography = {
+    type: {
+        serif: 'Playfair Display',
+        sans: 'Inter',
+        accent: 'Caveat'
+    },
+    weight: {
+        regular: '400',
+        bold: '700',
+        extrabold: '800',
+        black: '900'
+    },
+    size: {
+        h1: 64,
+        h2: 48,
+        h3: 36,
+        h4: 28,
+        bl: 18,
+        body: 16,
+        bs: 14,
+        caption: 12
+    }
+}
+
+export const SampleText = 'We built your route around what you love—now all that’s left is to go.'
+
+# Typography 
+
+## Primary Serif - Headlines / Emotion 
+
+**Font:** *Playfair Display*
+**Weight:** *Extra Bold*
+
+**Why:**
+
+- Feels cinematic, expressive 
+- Slightly dramatic without being cheesy 
+- Perfect for that "get lost" energy
+
+**Use for:**
+
+- Hero headlines
+- Section titles
+- Big moments 
+
+<Typeset fontSizes={[
+    Number(typography.size.h1),
+    Number(typography.size.h2),
+    Number(typography.size.h3),
+    Number(typography.size.h4),
+    Number(typography.size.bl),
+    Number(typography.size.body),
+    Number(typography.size.bs),
+    Number(typography.size.caption)
+]} 
+fontWeight={typography.weight.extrabold}
+fontFamily={typography.type.serif}
+sampleText={SampleText} />
+
+## Secondary Sans - Body Text
+
+**Font:** *Inter*
+**Weight:** *Regular*
+
+**Why:**
+
+- Clean, modern, insanely readable 
+- Doesn't fight the serif 
+- Scales beautifully across devices 
+
+**Use for:**
+- Body text
+- Buttons 
+- Inputs
+- Navigation 
+- System messages 
+
+<Typeset fontSizes={[
+     Number(typography.size.h1),
+    Number(typography.size.h2),
+    Number(typography.size.h3),
+    Number(typography.size.h4),
+    Number(typography.size.bl),
+    Number(typography.size.body),
+    Number(typography.size.bs),
+    Number(typography.size.caption)
+]} 
+fontWeight={typography.weight.regular}
+fontFamily={typography.type.sans}
+sampleText={SampleText} />
+
+## Accent Script - Personality Hits 
+**Font:** *Caveat*
+
+**Why:**
+- Feels human, imperfect, personal
+- Adds that "travel journal scribble" vibe 
+
+**Use for:**
+- Highlights 
+- Notes 
+- Annotations
+- Occasional emphasis only 
+
+*Never use for long text (seriously)* 
+
+<Typeset fontSizes={[
+     Number(typography.size.h1),
+    Number(typography.size.h2),
+    Number(typography.size.h3),
+    Number(typography.size.h4),
+    Number(typography.size.bl),
+    Number(typography.size.body),
+    Number(typography.size.bs),
+    Number(typography.size.caption)
+]} 
+fontWeight={typography.weight.regular}
+fontFamily={typography.type.accent}
+sampleText={SampleText} />
+
+
+## Typography Roles
+
+### Headlines (Serif)
+- Short 
+- Punchy 
+- Emotional 
+- Never more than 1-2 lines 
+
+"Take the long way."
+
+### Body (Sans)
+- Clean, readable, slightly relaxed 
+- Conversational tone 
+
+### Labels / UI (Sans Medium)
+- Slightly tighter tracking 
+- Clear hierarchy 
+
+### Accent (Script)
+
+- Used like a highlighter, not a paragraph:  
+"worth it",
+"don't skip this"
+
+## Usage Guidelines 
+
+### Hierarchy Rules 
+
+- 1 dominant headline per screen
+- Clear visual drop between levels
+- Don't stack multiple large serif headers (gets heavy fast)
+
+### Spacing + Rhythm 
+
+- Generous whitespace = premium feel 
+- Line height slightly loose for readability
+- Avoid cramped layouts at all cost 
+
+### Contrast Pairing 
+
+Best combos:
+- Serif headline + Sans body ✅
+- Sans UI + Script accent ✅
+
+Avoid:
+- Script + Script ❌
+- Serif for body text ❌ (too heavy)
+
+### Alignment Style
+
+- Mostly **left-aligned**
+- Occasional **centered hero text**
+- Avoid justified text (kills the vibe)
+
+### Case Usage 
+
+- Headlines: **Title Case or Sentence Case**
+- UI labels: **Sentence case**
+- Avoid ALL CAPS except:
+- small labels
+- navigation tags 
+
+### Letter Spacing
+- Headlines: slightly tight (-1% to -2%)
+- UI labels: slightly loose (+2% to +4%)
+
+## Emotional Typography Rules
+
+Every text block should feel:
+- Effortless
+- Slightly imperfect
+- Human, not system-generated 
+
+If it feels like:
+- ❌ a SaaS dashboard
+- ❌ a banking app
+
+...it's wrong.

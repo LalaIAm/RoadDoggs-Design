@@ -1,0 +1,234 @@
+import {Meta, ColorPalette, ColorItem} from '@storybook/addon-docs/blocks'
+
+<Meta title="Colors" />
+
+# Colors 
+
+## Brand 
+
+<ColorPalette>
+    <ColorItem
+    title="Primary"
+    subtitle="Burnt Orange"
+    colors={{
+          "50": "#f9eeea",
+          "100": "#f3dcd5",
+          "200": "#e7b9ab",
+          "300": "#dc9781",
+          "400": "#d07457",
+          "500": "#c4512d",
+          "600": "#9d4124",
+          "700": "#76311b",
+          "800": "#4e2012",
+          "900": "#271009"
+        }}
+     />
+    <ColorItem 
+    title="Secondary"
+    subtitle="Olive Drift"
+    colors={{
+          "50": "#f0f2ef",
+          "100": "#e1e5de",
+          "200": "#c4cbbe",
+          "300": "#a6b19d",
+          "400": "#89977d",
+          "500": "#6b7d5c",
+          "600": "#56644a",
+          "700": "#404b37",
+          "800": "#2b3225",
+          "900": "#151912"
+    }}
+    />
+    <ColorItem
+    title="Secondary"
+    subtitle="Sky Fade Blue"
+    colors={{
+         "50": "#f0f4f6",
+          "100": "#e2e8ed",
+          "200": "#c4d2da",
+          "300": "#a7bbc8",
+          "400": "#89a5b5",
+          "500": "#6c8ea3",
+          "600": "#567282",
+          "700": "#415562",
+          "800": "#2b3941",
+          "900": "#161c21"
+    }}
+     />
+     <ColorItem
+     title="Secondary"
+     subtitle="Muted Rust"
+     colors={{
+         "50": "#f6efeb",
+          "100": "#edded8",
+          "200": "#dbbdb0",
+          "300": "#ca9c89",
+          "400": "#b87b61",
+          "500": "#a65a3a",
+          "600": "#85482e",
+          "700": "#643623",
+          "800": "#422417",
+          "900": "#21120c"
+     }}
+      />
+</ColorPalette>
+
+## Neutrals 
+
+<ColorPalette>
+    <ColorItem
+    title="Road Black"
+    subtitle="Road Black"
+    colors={{
+         "50": "#e8e8e8",
+          "100": "#d1d1d1",
+          "200": "#a3a3a3",
+          "300": "#767676",
+          "400": "#484848",
+          "500": "#1a1a1a",
+          "600": "#151515",
+          "700": "#101010",
+          "800": "#0a0a0a",
+          "900": "#050505"
+    }}
+    
+     />
+<ColorItem title="Dust White" subtitle="Dust White" 
+colors={{
+     "50": "#fefefd",
+          "100": "#fdfcfb",
+          "200": "#fbf9f7",
+          "300": "#f8f7f4",
+          "400": "#f6f4f0",
+          "500": "#f4f1ec",
+          "600": "#c3c1bd",
+          "700": "#92918e",
+          "800": "#62605e",
+          "900": "#31302f"
+}} />
+<ColorItem title="Asphault Gray" subtitle="Asphault Gray" colors={{
+      "50": "#eaeaea",
+          "100": "#d5d5d5",
+          "200": "#acacac",
+          "300": "#828282",
+          "400": "#595959",
+          "500": "#2f2f2f",
+          "600": "#262626",
+          "700": "#1c1c1c",
+          "800": "#131313",
+          "900": "#090909"
+}} />
+<ColorItem title="Faded Sand" subtitle="Faded Sand" colors={{
+      "50": "#fbfaf9",
+          "100": "#f7f6f4",
+          "200": "#f0ede9",
+          "300": "#e8e3dd",
+          "400": "#e1dad2",
+          "500": "#d9d1c7",
+          "600": "#aea79f",
+          "700": "#827d77",
+          "800": "#575450",
+          "900": "#2b2a28"
+}} />
+</ ColorPalette >
+
+## Semantic Colors
+
+<ColorPalette>
+<ColorItem title="Success" subtitle="Desert Green" colors={{"500":"#5E8C61"}} />
+<ColorItem title="Warning" subtitle="Amber Glow" colors={{"500": "#D98C3A"}} />
+<ColorItem title="Error" subtitle="Dust Red" colors={{"500": "#a94438"}} />
+<ColorItem title="Info" subtitle="Steel Blue" colors={{"500": "#5C7A8D"}} />
+</ ColorPalette>
+
+## Gradients 
+
+<ColorPalette>
+<ColorItem title="Primary Brand Gradient" subtitle="Sunset Drive" colors={{
+    "gradient" : "linear-gradient(135deg,#F4F1EC 0%,  #D97A3A 30%, #C4512D 65%, #6A2E1F 100%)" }}/>
+<ColorItem title="Dark Mode Gradient" subtitle="Midnight Route" colors={{
+    "gradient": "linear-gradient(160deg, #121212 0%, #1A1A1A 40%, #2C3E46 75%,#6C8EA3 100%)"
+}} />
+</ ColorPalette>
+
+## Accessibility Guidelines
+
+We’re not sacrificing usability for aesthetics. RoadDoggs should feel cool and be readable at 2am on 3% battery. 
+
+### Contrast Rules
+- Minimum WCAG AA (4.5:1) for all body text
+- Large text: minimum 3:1
+- Buttons (especially Burnt Orange) must pass contrast on both light & dark
+
+### Key Pairings (Safe Combos)
+
+- Road Black on Dust White ✅
+- Dust White on Road Black ✅
+- Burnt Orange on Road Black ✅
+- Road Black on Faded Sand ✅
+
+### Avoid These Combos 
+
+- Burnt Orange on Faded Sand ❌ (low contrast)
+- Olive on Dust White ❌ (too soft)
+- Gray on Gray ❌ (obvious villain behavior)
+
+### Color Blind Considerations 
+
+- Never rely on color alone for meaning
+- Pair semantic colors with:
+-- icons
+-- labels
+-- subtle patterns
+
+Example:
+
+- Error = red + icon + message
+- Not just red text floating in space
+
+## Usage Guidelines
+
+### Color Hierarchy Rule (super important)
+
+**1 Primary Accent at a time**
+
+If everything is highlighted... nothing is.
+
+- Burnt Orange = main action only
+- Secondary accents = supporting roles 
+- Neutrals = everything else 
+
+### CTA Rules
+ 
+- Primary buttons = **Burnt Orange**
+- Hover = **Muted Rust**
+- Disabled = **Asphalt Gray** 
+
+### Background Strategy
+
+- Default = **light (Dust White)** for content 
+- Switch to **dark (Road Black)** for: maps, immersive views, route exploration 
+
+### Card Design 
+
+- Backgrond: Dust White or Faded Sand
+- Border: subtle (or none)
+- Accent: small hint of orange or olive 
+
+Think:
+- travel journal, not SaaS dashboard
+
+### Map + UI Balance 
+
+Maps are visually loud. UI should chill.
+- Use dark map + minimal UI chrome 
+- Let route color (orange) pop clearly
+- Avoid stacking too many colors on map
+
+### Emotional Color Use 
+
+Each color should *feel* like something:
+- Orange -> action / movement / "go"
+- Olive -> calm / nature / scenic 
+- Blue -> pause / balance 
+- Neutrals -> grounding / readability
