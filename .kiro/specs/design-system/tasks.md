@@ -180,7 +180,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Use brand-voice copy in all story args (no lorem ipsum, no banned words)
   - **Requirements**: 10.1, 10.2, 10.3, 10.4, 12.1, 12.3, 12.5
 
-- [ ] 14. Build AvatarGroup component
+- [x] 14. Build AvatarGroup component
   - Create `src/components/AvatarGroup/AvatarGroup.jsx` with `avatars`, `max`, and `size` props
   - Render up to `max` Avatar components in a horizontally overlapping stack
   - Apply negative left margin (`margin-left: -8px`) and white border to each Avatar after the first

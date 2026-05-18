@@ -1,1 +1,64 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+// ─── AvatarGroup ──────────────────────────────────────────────────────────────
+
+.rd-avatar-group {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  // ── Items ────────────────────────────────────────────────────────────────────
+
+  &__item {
+    display: inline-flex;
+    margin-left: -8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    // White border ring to visually separate overlapping avatars
+    .rd-avatar {
+      box-shadow: 0 0 0 2px white;
+    }
+  }
+
+  // ── Overflow badge ────────────────────────────────────────────────────────────
+
+  &__overflow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: t.$asphalt-gray;
+    color: t.$dust-white;
+    font-family: t.$font-body;
+    font-weight: t.$weight-bold;
+    box-shadow: 0 0 0 2px white;
+    flex-shrink: 0;
+    line-height: 1;
+    user-select: none;
+
+    // Match Avatar size variants
+    &--sm {
+      width: 24px;
+      height: 24px;
+      font-size: t.$text-xs;
+    }
+
+    &--md {
+      width: 32px;
+      height: 32px;
+      font-size: t.$text-xs;
+    }
+
+    &--lg {
+      width: 48px;
+      height: 48px;
+      font-size: t.$text-sm;
+    }
+  }
+}

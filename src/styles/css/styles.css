@@ -369,6 +369,54 @@ body {
   user-select: none;
 }
 
+.rd-avatar-group {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rd-avatar-group__item {
+  display: inline-flex;
+  margin-left: -8px;
+}
+.rd-avatar-group__item:first-child {
+  margin-left: 0;
+}
+.rd-avatar-group__item .rd-avatar {
+  box-shadow: 0 0 0 2px white;
+}
+.rd-avatar-group__overflow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #2f2f2f;
+  color: #f4f1ec;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 0 0 2px white;
+  flex-shrink: 0;
+  line-height: 1;
+  user-select: none;
+}
+.rd-avatar-group__overflow--sm {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+.rd-avatar-group__overflow--md {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+}
+.rd-avatar-group__overflow--lg {
+  width: 48px;
+  height: 48px;
+  font-size: 14px;
+}
+
 .rd-badge {
   display: inline-block;
   padding: 4px 12px;
@@ -861,5 +909,3 @@ body {
 .rd-stepper-input--disabled .rd-stepper-input__btn {
   cursor: not-allowed;
 }
-
-/*# sourceMappingURL=styles.css.map */
