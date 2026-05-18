@@ -191,7 +191,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add stories: WithinMax (2 avatars, max=3), ExceedsMax (4 avatars, max=3)
   - **Requirements**: 20.4, 20.5, 20.6, 20.7, 20.8
 
-- [ ] 15. Build Card component (all variants)
+- [x] 15. Build Card component (all variants)
   - Create `src/components/Card/Card.jsx` with `variant`, `header`, `body`, `footer`, `image`, `interactive`, `tripData`, `draftData`, `onClick` props
   - Default variant: render header/body/footer slots with optional full-width image at top
   - Apply hover lift (`translateY(-2px)`, shadow upgrade, Burnt Orange border) and focus ring when `interactive` is true

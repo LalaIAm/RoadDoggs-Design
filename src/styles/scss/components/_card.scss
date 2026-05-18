@@ -1,1 +1,123 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+// ─── Base card ────────────────────────────────────────────────────────────────
+
+.rd-card {
+  background: t.$dust-white;
+  border: 1px solid t.$faded-sand;
+  border-radius: t.$radius-lg;
+  overflow: hidden;
+  box-shadow: t.$shadow-sm;
+
+  // ── Interactive modifier ──────────────────────────────────────────────────
+  &--interactive {
+    cursor: pointer;
+    transition:
+      box-shadow t.$transition-base,
+      transform t.$transition-base,
+      border-color t.$transition-base;
+
+    &:hover {
+      box-shadow: t.$shadow-md;
+      transform: translateY(-2px);
+      border-color: t.$burnt-orange;
+    }
+
+    &:focus-visible {
+      outline: 2px solid t.$burnt-orange;
+      outline-offset: 3px;
+    }
+  }
+
+  // ── Trip variant ──────────────────────────────────────────────────────────
+  &--trip {
+    background: t.$dust-white;
+  }
+
+  // ── Draft variant ─────────────────────────────────────────────────────────
+  &--draft {
+    background: t.$dust-white;
+    border: 2px dashed t.$faded-sand;
+    font-family: t.$font-caveat;
+    box-shadow: none;
+  }
+}
+
+// ─── Elements ─────────────────────────────────────────────────────────────────
+
+.rd-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.rd-card__header {
+  padding: t.$space-4 t.$space-5;
+  border-bottom: 1px solid t.$faded-sand;
+}
+
+.rd-card__body {
+  padding: t.$space-4 t.$space-5;
+}
+
+.rd-card__footer {
+  padding: t.$space-4 t.$space-5;
+  border-top: 1px solid t.$faded-sand;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rd-card__title {
+  font-family: t.$font-display;
+  font-size: t.$text-xl;
+  font-weight: t.$weight-bold;
+  color: t.$road-black;
+  margin: 0 0 t.$space-2;
+  line-height: t.$leading-snug;
+}
+
+.rd-card__meta {
+  font-family: t.$font-body;
+  font-size: t.$text-sm;
+  color: t.$asphalt-gray;
+  margin: 0 0 t.$space-3;
+  line-height: t.$leading-normal;
+}
+
+.rd-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: t.$space-2;
+  margin-bottom: t.$space-3;
+}
+
+.rd-card__crew {
+  margin-bottom: t.$space-4;
+}
+
+// ─── Draft elements ───────────────────────────────────────────────────────────
+
+.rd-card__draft-title {
+  font-family: t.$font-caveat;
+  font-size: t.$text-2xl;
+  color: t.$road-black;
+  margin: 0 0 t.$space-2;
+  line-height: t.$leading-snug;
+}
+
+.rd-card__draft-note {
+  font-family: t.$font-caveat;
+  font-size: t.$text-lg;
+  color: t.$asphalt-gray;
+  margin: 0 0 t.$space-2;
+  line-height: t.$leading-normal;
+}
+
+.rd-card__draft-date {
+  font-family: t.$font-caveat;
+  font-size: t.$text-base;
+  color: t.$muted-rust;
+  margin: 0;
+}

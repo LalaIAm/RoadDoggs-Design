@@ -909,3 +909,108 @@ body {
 .rd-stepper-input--disabled .rd-stepper-input__btn {
   cursor: not-allowed;
 }
+
+.rd-card {
+  background: #f4f1ec;
+  border: 1px solid #d9d1c7;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(26, 26, 26, 0.06);
+}
+.rd-card--interactive {
+  cursor: pointer;
+  transition: box-shadow 180ms ease, transform 180ms ease, border-color 180ms ease;
+}
+.rd-card--interactive:hover {
+  box-shadow: 0 8px 24px rgba(26, 26, 26, 0.1);
+  transform: translateY(-2px);
+  border-color: #c4512d;
+}
+.rd-card--interactive:focus-visible {
+  outline: 2px solid #c4512d;
+  outline-offset: 3px;
+}
+.rd-card--trip {
+  background: #f4f1ec;
+}
+.rd-card--draft {
+  background: #f4f1ec;
+  border: 2px dashed #d9d1c7;
+  font-family: "Caveat", cursive;
+  box-shadow: none;
+}
+
+.rd-card__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.rd-card__header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #d9d1c7;
+}
+
+.rd-card__body {
+  padding: 16px 20px;
+}
+
+.rd-card__footer {
+  padding: 16px 20px;
+  border-top: 1px solid #d9d1c7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rd-card__title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.rd-card__meta {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  color: #2f2f2f;
+  margin: 0 0 12px;
+  line-height: 1.55;
+}
+
+.rd-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rd-card__crew {
+  margin-bottom: 16px;
+}
+
+.rd-card__draft-title {
+  font-family: "Caveat", cursive;
+  font-size: 24px;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.rd-card__draft-note {
+  font-family: "Caveat", cursive;
+  font-size: 18px;
+  color: #2f2f2f;
+  margin: 0 0 8px;
+  line-height: 1.55;
+}
+
+.rd-card__draft-date {
+  font-family: "Caveat", cursive;
+  font-size: 16px;
+  color: #a65a3a;
+  margin: 0;
+}
