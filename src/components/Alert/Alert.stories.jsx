@@ -1,4 +1,5 @@
-import React, { fn } from "storybook/test";
+import React from 'react'
+import { fn } from "storybook/test";
 import Alert from "./Alert";
 import {jsx as _jsx } from 'react/jsx-runtime'
 
