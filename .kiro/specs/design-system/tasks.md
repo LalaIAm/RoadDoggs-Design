@@ -138,7 +138,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add stories: WithImage, InitialsFallback, Small, Medium, Large
   - **Requirements**: 20.1, 20.2, 20.3
 
-- [ ] 10. Build StepperInput component
+- [x] 10. Build StepperInput component
   - Create `src/components/StepperInput/StepperInput.jsx` with `label`, `sublabel`, `value`, `min`, `max`, and `onChange` props
   - Render label, optional sublabel, decrement button (`−`), value display, and increment button (`+`)
   - Disable decrement button and set `aria-disabled="true"` when `value === min`

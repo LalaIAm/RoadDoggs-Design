@@ -1,1 +1,100 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+// ─── StepperInput ─────────────────────────────────────────────────────────────
+// Controlled numeric counter with decrement/increment buttons.
+// Used for Adults, Kids, Pets counts in the onboarding crew step.
+
+.rd-stepper-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: t.$space-4;
+  font-family: t.$font-body;
+
+  // ── Label group ─────────────────────────────────────────────────────────────
+  &__labels {
+    display: flex;
+    flex-direction: column;
+    gap: t.$space-1;
+  }
+
+  &__label {
+    font-family: t.$font-body;
+    font-size: t.$text-base;
+    font-weight: t.$weight-bold;
+    color: t.$road-black;
+    line-height: t.$leading-snug;
+  }
+
+  &__sublabel {
+    font-size: t.$text-sm;
+    font-weight: t.$weight-regular;
+    color: t.$asphalt-gray;
+    line-height: t.$leading-normal;
+  }
+
+  // ── Controls row ─────────────────────────────────────────────────────────────
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: t.$space-4;
+  }
+
+  // ── Decrement / Increment buttons ────────────────────────────────────────────
+  &__btn {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid t.$faded-sand;
+    background: t.$dust-white;
+    color: t.$road-black;
+    font-size: t.$text-xl;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      background t.$transition-base,
+      border-color t.$transition-base,
+      color t.$transition-base;
+
+    &:hover:not(:disabled) {
+      background: t.$burnt-orange;
+      border-color: t.$burnt-orange;
+      color: t.$dust-white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid t.$burnt-orange;
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  // ── Value display ─────────────────────────────────────────────────────────────
+  &__value {
+    font-family: t.$font-body;
+    font-size: t.$text-xl;
+    font-weight: t.$weight-bold;
+    color: t.$road-black;
+    min-width: 2ch;
+    text-align: center;
+    line-height: t.$leading-tight;
+  }
+
+  // ── Disabled modifier ─────────────────────────────────────────────────────────
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    .rd-stepper-input__btn {
+      cursor: not-allowed;
+    }
+  }
+}
