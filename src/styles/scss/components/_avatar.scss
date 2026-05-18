@@ -1,1 +1,59 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+// ─── Avatar ───────────────────────────────────────────────────────────────────
+
+.rd-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background: t.$burnt-orange;
+  flex-shrink: 0;
+
+  // ── Size modifiers ──────────────────────────────────────────────────────────
+
+  &--sm {
+    width: 24px;
+    height: 24px;
+
+    .rd-avatar__initials {
+      font-size: t.$text-xs;
+    }
+  }
+
+  &--md {
+    width: 32px;
+    height: 32px;
+
+    .rd-avatar__initials {
+      font-size: t.$text-sm;
+    }
+  }
+
+  &--lg {
+    width: 48px;
+    height: 48px;
+
+    .rd-avatar__initials {
+      font-size: t.$text-base;
+    }
+  }
+
+  // ── Elements ────────────────────────────────────────────────────────────────
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__initials {
+    font-family: t.$font-body;
+    font-weight: t.$weight-bold;
+    color: t.$dust-white;
+    line-height: 1;
+    user-select: none;
+  }
+}

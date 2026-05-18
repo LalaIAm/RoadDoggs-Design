@@ -127,7 +127,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add stories: Inactive, Active, WithIcon — use filter labels from the discovery screen (Food, Scenic, Camp, EV Charge)
   - **Requirements**: 19.1, 19.2, 19.3, 19.4, 19.5, 19.6, 19.7
 
-- [ ] 9. Build Avatar component
+- [x] 9. Build Avatar component
   - Create `src/components/Avatar/Avatar.jsx` with `src`, `name`, `size`, and `className` props
   - Render `<img>` when `src` is provided; attach `onError` handler to fall back to initials
   - Render initials fallback (first letter of each word, max 2 chars) when `src` is absent or fails to load
