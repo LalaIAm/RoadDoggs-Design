@@ -1,7 +1,7 @@
 import Accordion from './Accordion'
 
 export default {
-    title: 'Atom/Accordion',
+    title: 'Atoms/Accordion',
     component: Accordion,
     parameters: {
         layout: 'centered'

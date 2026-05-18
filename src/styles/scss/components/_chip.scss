@@ -1,1 +1,41 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+.rd-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: t.$space-2;
+  padding: t.$space-2 t.$space-4;
+  border-radius: t.$radius-pill;
+  border: 1px solid t.$faded-sand;
+  background: t.$dust-white;
+  color: t.$road-black;
+  font-family: t.$font-body;
+  font-size: t.$text-sm;
+  font-weight: t.$weight-bold;
+  cursor: pointer;
+  transition:
+    background t.$transition-base,
+    color t.$transition-base,
+    border-color t.$transition-base;
+
+  &--active {
+    background: t.$burnt-orange;
+    color: t.$dust-white;
+    border-color: t.$burnt-orange;
+  }
+
+  &:focus-visible {
+    outline: 2px solid t.$burnt-orange;
+    outline-offset: 3px;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  &__label {
+    line-height: 1;
+  }
+}

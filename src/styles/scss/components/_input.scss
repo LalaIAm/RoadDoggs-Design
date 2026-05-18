@@ -1,1 +1,85 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+.rd-input {
+  display: flex;
+  flex-direction: column;
+  gap: t.$space-2;
+
+  // ── Label ──────────────────────────────────────────────────────────────────
+
+  &__label {
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    font-weight: t.$weight-bold;
+    color: t.$road-black;
+  }
+
+  // ── Field ──────────────────────────────────────────────────────────────────
+
+  &__field {
+    padding: t.$space-3 t.$space-4;
+    border: 1px solid t.$faded-sand;
+    border-radius: t.$radius-md;
+    font-family: t.$font-body;
+    font-size: t.$text-base;
+    color: t.$road-black;
+    background: white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color t.$transition-fast;
+
+    &::placeholder {
+      color: t.$asphalt-gray;
+      opacity: 0.6;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: t.$burnt-orange;
+      box-shadow: 0 0 0 3px rgba(t.$burnt-orange, 0.2);
+    }
+  }
+
+  // ── Error state ────────────────────────────────────────────────────────────
+
+  &--error {
+    .rd-input__field {
+      border-color: t.$error;
+
+      &:focus {
+        border-color: t.$error;
+        box-shadow: 0 0 0 3px rgba(t.$error, 0.2);
+      }
+    }
+  }
+
+  // ── Disabled state ─────────────────────────────────────────────────────────
+
+  &--disabled {
+    .rd-input__field {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: t.$faded-sand;
+    }
+
+    .rd-input__label {
+      opacity: 0.5;
+    }
+  }
+
+  // ── Helper and error text ──────────────────────────────────────────────────
+
+  &__error {
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    color: t.$error;
+    margin: 0;
+  }
+
+  &__helper {
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    color: t.$asphalt-gray;
+    margin: 0;
+  }
+}

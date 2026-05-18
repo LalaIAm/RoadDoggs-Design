@@ -2,7 +2,7 @@ import { fn } from 'storybook/test'
 import Alert from './Alert'
 
 export default {
-    title: 'Atom/Alert',
+    title: 'Atoms/Alert',
     component: Alert,
     parameters: {
         layout: 'centered'

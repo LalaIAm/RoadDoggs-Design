@@ -87,7 +87,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add stories for all six variants with brand-voice labels (e.g., "4 Spots", "On Track", "Long Drive")
   - **Requirements**: 3.1, 3.2, 3.3, 3.4, 3.5
 
-- [ ] 6. Build Input component
+- [x] 6. Build Input component
   - Create `src/components/Input/Input.jsx` with `id`, `label`, `type`, `value`, `onChange`, `placeholder`, `helperText`, `error`, and `disabled` props
   - Render visible `<label>` associated via `htmlFor`/`id`
   - Apply `aria-invalid="true"` and `aria-describedby` pointing to error element when `error` prop is provided

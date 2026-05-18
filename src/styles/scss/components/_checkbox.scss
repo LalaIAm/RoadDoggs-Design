@@ -1,1 +1,73 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+.rd-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: t.$space-3;
+  cursor: pointer;
+  font-family: t.$font-body;
+  font-size: t.$text-base;
+  color: t.$road-black;
+  user-select: none;
+
+  // ── Visually hidden native input — retained for a11y ──────────────────────
+  &__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    // Focus ring applied to the custom box via adjacent sibling selector
+    &:focus-visible + .rd-checkbox__box {
+      outline: 2px solid t.$burnt-orange;
+      outline-offset: 2px;
+    }
+  }
+
+  // ── Custom checkbox box ───────────────────────────────────────────────────
+  &__box {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid t.$faded-sand;
+    border-radius: t.$radius-sm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      border-color t.$transition-fast,
+      background t.$transition-fast;
+    background: transparent;
+  }
+
+  // ── Checkmark character ───────────────────────────────────────────────────
+  &__check {
+    font-size: 13px;
+    line-height: 1;
+    color: t.$dust-white;
+  }
+
+  // ── Label text ────────────────────────────────────────────────────────────
+  &__label {
+    line-height: t.$leading-normal;
+  }
+
+  // ── Checked modifier ─────────────────────────────────────────────────────
+  &--checked {
+    .rd-checkbox__box {
+      background: t.$burnt-orange;
+      border-color: t.$burnt-orange;
+      color: t.$dust-white;
+    }
+  }
+
+  // ── Disabled modifier ─────────────────────────────────────────────────────
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    .rd-checkbox__input {
+      cursor: not-allowed;
+    }
+  }
+}
