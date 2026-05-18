@@ -13,6 +13,14 @@ export default {
   },
 };
 
+export const Basic = {
+  args: {
+    id: "remember-basic",
+    label: "Remember me",
+    checked: false,
+  },
+};
+
 export const Unchecked = {
   args: {
     id: "remember",

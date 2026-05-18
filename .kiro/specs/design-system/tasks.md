@@ -102,7 +102,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Use brand-voice placeholder text (e.g., "Search spots...", "you@roaddoggs.com")
   - **Requirements**: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7
 
-- [ ] 7. Build Checkbox component
+- [x] 7. Build Checkbox component
   - Create `src/components/Checkbox/Checkbox.jsx` with `id`, `label`, `checked`, `onChange`, and `disabled` props
   - Visually hide the native `<input type="checkbox">` but keep it in the DOM for accessibility
   - Render a custom `rd-checkbox__box` element that shows a checkmark when `checked` is true
