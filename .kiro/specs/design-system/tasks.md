@@ -150,7 +150,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add stories: Default (Adults, value=2), AtMinimum (Kids, value=0), AtMaximum (Pets, value=4)
   - **Requirements**: 18.1, 18.2, 18.3, 18.4, 18.5, 18.6, 18.7, 18.8
 
-- [ ] 11. Build SearchBar component
+- [x] 11. Build SearchBar component
   - Create `src/components/SearchBar/SearchBar.jsx` with `value`, `placeholder`, `onChange`, and `className` props
   - Render search Icon prefix on the left side
   - Render clear (×) button using Icon when `value` is non-empty; call `onChange("")` on click

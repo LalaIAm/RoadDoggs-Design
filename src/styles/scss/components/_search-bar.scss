@@ -1,1 +1,107 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+.rd-search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: t.$space-2;
+  padding: t.$space-2 t.$space-4;
+  border: 1px solid t.$faded-sand;
+  border-radius: t.$radius-pill;
+  background: white;
+  transition:
+    border-color t.$transition-fast,
+    box-shadow t.$transition-fast;
+
+  &:focus-within {
+    border-color: t.$burnt-orange;
+    box-shadow: 0 0 0 3px rgba(t.$burnt-orange, 0.2);
+  }
+
+  // ── Visually hidden label ──────────────────────────────────────────────────
+
+  &__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  // ── Search icon ────────────────────────────────────────────────────────────
+
+  &__icon {
+    flex-shrink: 0;
+    color: t.$asphalt-gray;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  // ── Input field ────────────────────────────────────────────────────────────
+
+  &__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: t.$font-body;
+    font-size: t.$text-base;
+    color: t.$road-black;
+    min-width: 0;
+
+    &::placeholder {
+      color: t.$asphalt-gray;
+      opacity: 0.6;
+    }
+
+    // Remove the native clear button that browsers add for type="search"
+    &::-webkit-search-cancel-button {
+      appearance: none;
+    }
+  }
+
+  // ── Clear button ───────────────────────────────────────────────────────────
+
+  &__clear {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: t.$asphalt-gray;
+    padding: 0;
+    line-height: 1;
+    transition: color t.$transition-base;
+
+    &:hover {
+      color: t.$road-black;
+    }
+
+    &:focus-visible {
+      outline: 2px solid t.$burnt-orange;
+      outline-offset: 2px;
+      border-radius: t.$radius-sm;
+    }
+  }
+
+  // ── Disabled state ─────────────────────────────────────────────────────────
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    .rd-search-bar__input {
+      cursor: not-allowed;
+    }
+
+    .rd-search-bar__clear {
+      cursor: not-allowed;
+    }
+  }
+}
