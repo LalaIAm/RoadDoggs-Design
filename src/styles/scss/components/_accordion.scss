@@ -1,32 +1,24 @@
-@use "../theme";
-
-$road-black: #1a1a1a;
-$dust-white: #f4f1ec;
-$faded-sand: #d9d1c7;
-$burnt-orange: #c4512d;
-$muted-rust: #a65a3a;
-$asphalt-gray: #2f2f2f;
-
+@use "../theme" as t;
 
 .rd-accordion {
   max-width: 760px;
   margin: 0 auto;
   padding: 4rem 1.25rem;
-  color: $road-black;
+  color: t.$road-black;
 
   &__eyebrow {
     margin-bottom: 0.5rem;
-    font-family: "Caveat", cursive;
-    font-size: 1.5rem;
-    color: $burnt-orange;
+    font-family: t.$font-caveat;
+    font-size: t.$text-2xl;
+    color: t.$burnt-orange;
   }
 
   &__heading {
     margin-bottom: 1.75rem;
-    font-family: "Playfair Display", serif;
+    font-family: t.$font-display;
     font-size: clamp(2rem, 5vw, 3.25rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    line-height: t.$leading-tight;
+    letter-spacing: t.$tracking-tight;
   }
 
   &__list {
@@ -36,24 +28,26 @@ $asphalt-gray: #2f2f2f;
 
   &__item {
     overflow: hidden;
-    border: 1px solid rgba($road-black, 0.12);
-    border-radius: 1.25rem;
-    background: $dust-white;
-    box-shadow: 0 14px 35px rgba($road-black, 0.08);
-    transition: border-color 180ms ease, transform 180ms ease,
-      box-shadow 180ms ease;
+    border: 1px solid rgba(t.$road-black, 0.12);
+    border-radius: t.$radius-lg;
+    background: t.$dust-white;
+    box-shadow: t.$shadow-lg;
+    transition:
+      border-color t.$transition-base,
+      transform t.$transition-base,
+      box-shadow t.$transition-base;
 
     &:hover {
       transform: translateY(-2px);
-      border-color: rgba($burnt-orange, 0.45);
-      box-shadow: 0 18px 42px rgba($road-black, 0.12);
+      border-color: rgba(t.$burnt-orange, 0.45);
+      box-shadow: 0 18px 42px rgba(t.$road-black, 0.12);
     }
 
     &--open {
-      border-color: rgba($burnt-orange, 0.65);
+      border-color: rgba(t.$burnt-orange, 0.65);
       background:
-        linear-gradient(rgba($dust-white, 0.94), rgba($dust-white, 0.94)),
-        linear-gradient(135deg, $dust-white, $faded-sand);
+        linear-gradient(rgba(t.$dust-white, 0.94), rgba(t.$dust-white, 0.94)),
+        linear-gradient(135deg, t.$dust-white, t.$faded-sand);
     }
   }
 
@@ -63,15 +57,15 @@ $asphalt-gray: #2f2f2f;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 1.25rem 1.35rem;
+    padding: t.$space-5 t.$space-4;
     border: 0;
     background: transparent;
-    color: $road-black;
+    color: t.$road-black;
     cursor: pointer;
     text-align: left;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: t.$font-body;
+    font-size: t.$text-base;
+    font-weight: t.$weight-bold;
   }
 
   &__icon {
@@ -80,32 +74,34 @@ $asphalt-gray: #2f2f2f;
     flex: 0 0 2rem;
     display: grid;
     place-items: center;
-    border-radius: 999px;
-    background: $road-black;
-    color: $dust-white;
-    font-size: 1.35rem;
+    border-radius: t.$radius-pill;
+    background: t.$road-black;
+    color: t.$dust-white;
+    font-size: t.$text-xl;
     line-height: 1;
-    transition: background 180ms ease, transform 180ms ease;
+    transition:
+      background t.$transition-base,
+      transform t.$transition-base;
   }
 
   &__item--open &__icon {
-    background: $burnt-orange;
+    background: t.$burnt-orange;
     transform: rotate(180deg);
   }
 
   &__panel {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 240ms ease;
+    transition: grid-template-rows t.$transition-slow;
 
     p {
       overflow: hidden;
       margin: 0;
-      padding: 0 1.35rem;
-      color: rgba($asphalt-gray, 0.9);
-      font-family: "Inter", sans-serif;
+      padding: 0 t.$space-4;
+      color: rgba(t.$asphalt-gray, 0.9);
+      font-family: t.$font-body;
       font-size: 0.98rem;
-      line-height: 1.65;
+      line-height: t.$leading-relaxed;
     }
   }
 
@@ -113,7 +109,7 @@ $asphalt-gray: #2f2f2f;
     grid-template-rows: 1fr;
 
     p {
-      padding-bottom: 1.25rem;
+      padding-bottom: t.$space-5;
     }
   }
 }

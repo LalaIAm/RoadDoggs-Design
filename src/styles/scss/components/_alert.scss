@@ -1,53 +1,46 @@
-$road-black: #1a1a1a;
-$dust-white: #f4f1ec;
-$faded-sand: #d9d1c7;
-
-$info: #5c7a8d;
-$success: #5e8c61;
-$warning: #d98c3a;
-$error: #a94438;
+@use "../theme" as t;
 
 .rd-alert {
-  --alert-accent: #{$info};
-  --alert-bg: #{rgba($info, 0.12)};
-  --alert-border: #{rgba($info, 0.35)};
+  --alert-accent: #{t.$info};
+  --alert-bg: #{rgba(t.$info, 0.12)};
+  --alert-border: #{rgba(t.$info, 0.35)};
 
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 0.875rem;
   width: 100%;
-  padding: 1rem 1rem;
+  padding: t.$space-4 t.$space-4;
   border: 1px solid var(--alert-border);
-  border-radius: 1.25rem;
+  border-radius: t.$radius-lg;
   background:
-    linear-gradient(rgba($dust-white, 0.94), rgba($dust-white, 0.94)),
+    linear-gradient(rgba(t.$dust-white, 0.94), rgba(t.$dust-white, 0.94)),
     var(--alert-bg);
-  color: $road-black;
-  box-shadow: 0 14px 34px rgba($road-black, 0.08);
+  color: t.$road-black;
+  box-shadow: t.$shadow-lg;
 
   &--info {
-    --alert-accent: #{$info};
-    --alert-bg: #{rgba($info, 0.13)};
-    --alert-border: #{rgba($info, 0.38)};
+    --alert-accent: #{t.$info};
+    --alert-bg: #{rgba(t.$info, 0.13)};
+    --alert-border: #{rgba(t.$info, 0.38)};
   }
 
   &--success {
-    --alert-accent: #{$success};
-    --alert-bg: #{rgba($success, 0.13)};
-    --alert-border: #{rgba($success, 0.38)};
+    --alert-accent: #{t.$success};
+    --alert-bg: #{rgba(t.$success, 0.13)};
+    --alert-border: #{rgba(t.$success, 0.38)};
   }
 
   &--warning {
-    --alert-accent: #{$warning};
-    --alert-bg: #{rgba($warning, 0.16)};
-    --alert-border: #{rgba($warning, 0.42)};
+    --alert-accent: #{t.$warning};
+    --alert-bg: #{rgba(t.$warning, 0.16)};
+    --alert-border: #{rgba(t.$warning, 0.42)};
   }
 
   &--error {
-    --alert-accent: #{$error};
-    --alert-bg: #{rgba($error, 0.13)};
-    --alert-border: #{rgba($error, 0.42)};
+    --alert-accent: #{t.$error};
+    --alert-bg: #{rgba(t.$error, 0.13)};
+    --alert-border: #{rgba(t.$error, 0.42)};
   }
 
   &__icon {
@@ -55,12 +48,12 @@ $error: #a94438;
     height: 2rem;
     display: grid;
     place-items: center;
-    border-radius: 999px;
+    border-radius: t.$radius-pill;
     background: var(--alert-accent);
-    color: $dust-white;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
+    color: t.$dust-white;
+    font-family: t.$font-body;
+    font-size: t.$text-base;
+    font-weight: t.$weight-extrabold;
     line-height: 1;
   }
 
@@ -69,19 +62,19 @@ $error: #a94438;
   }
 
   &__title {
-    margin: 0 0 0.25rem;
-    font-family: "Inter", sans-serif;
+    margin: 0 0 t.$space-1;
+    font-family: t.$font-body;
     font-size: 0.98rem;
-    font-weight: 800;
-    line-height: 1.35;
-    color: $road-black;
+    font-weight: t.$weight-extrabold;
+    line-height: t.$leading-snug;
+    color: t.$road-black;
   }
 
   &__message {
-    font-family: "Inter", sans-serif;
+    font-family: t.$font-body;
     font-size: 0.94rem;
-    line-height: 1.55;
-    color: rgba($road-black, 0.78);
+    line-height: t.$leading-normal;
+    color: rgba(t.$road-black, 0.78);
 
     p {
       margin: 0;
@@ -91,7 +84,7 @@ $error: #a94438;
   &__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: t.$space-2;
     margin-top: 0.85rem;
   }
 
@@ -99,22 +92,25 @@ $error: #a94438;
     min-height: 2.25rem;
     padding: 0.45rem 0.85rem;
     border: 1px solid var(--alert-accent);
-    border-radius: 999px;
+    border-radius: t.$radius-pill;
     background: var(--alert-accent);
-    color: $dust-white;
+    color: t.$dust-white;
     cursor: pointer;
-    font-family: "Inter", sans-serif;
-    font-size: 0.85rem;
-    font-weight: 750;
-    transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    font-weight: t.$weight-bold;
+    transition:
+      transform t.$transition-fast,
+      box-shadow t.$transition-fast,
+      opacity t.$transition-fast;
 
     &:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba($road-black, 0.12);
+      box-shadow: t.$shadow-md;
     }
 
     &:focus-visible {
-      outline: 3px solid rgba($road-black, 0.24);
+      outline: 3px solid rgba(t.$road-black, 0.24);
       outline-offset: 3px;
     }
 
@@ -130,21 +126,23 @@ $error: #a94438;
     display: grid;
     place-items: center;
     border: 0;
-    border-radius: 999px;
+    border-radius: t.$radius-pill;
     background: transparent;
-    color: rgba($road-black, 0.58);
+    color: rgba(t.$road-black, 0.58);
     cursor: pointer;
-    font-size: 1.35rem;
+    font-size: t.$text-xl;
     line-height: 1;
-    transition: background 160ms ease, color 160ms ease;
+    transition:
+      background t.$transition-fast,
+      color t.$transition-fast;
 
     &:hover {
-      background: rgba($road-black, 0.08);
-      color: $road-black;
+      background: rgba(t.$road-black, 0.08);
+      color: t.$road-black;
     }
 
     &:focus-visible {
-      outline: 3px solid rgba($road-black, 0.24);
+      outline: 3px solid rgba(t.$road-black, 0.24);
       outline-offset: 3px;
     }
   }

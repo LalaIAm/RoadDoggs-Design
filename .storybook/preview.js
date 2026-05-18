@@ -1,22 +1,38 @@
 /** @type { import('@storybook/react-vite').Preview } */
 
-import '../src/styles/css/styles.css'
+import "../src/styles/scss/styles.scss";
 
 const preview = {
   parameters: {
-    controls: {
-      matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+    backgrounds: {
+      default: "faded-sand",
+      values: [
+        { name: "faded-sand", value: "#d9d1c7" },
+        { name: "dust-white", value: "#f4f1ec" },
+        { name: "white", value: "#ffffff" },
+        { name: "road-black", value: "#1a1a1a" },
+      ],
+    },
+    viewport: {
+      viewports: {
+        mobile: { name: "Mobile", styles: { width: "375px", height: "812px" } },
+        tablet: {
+          name: "Tablet",
+          styles: { width: "768px", height: "1024px" },
+        },
+        desktop: {
+          name: "Desktop",
+          styles: { width: "1280px", height: "800px" },
+        },
       },
     },
-
-    a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: "todo"
-    }
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
+    },
+    a11y: { test: "todo" },
   },
 };
 

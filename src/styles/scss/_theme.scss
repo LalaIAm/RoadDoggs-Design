@@ -1,3 +1,4 @@
+// ─── Colors ──────────────────────────────────────────────────────────────────
 $road-black: #1a1a1a;
 $dust-white: #f4f1ec;
 $faded-sand: #d9d1c7;
@@ -5,7 +6,112 @@ $burnt-orange: #c4512d;
 $muted-rust: #a65a3a;
 $asphalt-gray: #2f2f2f;
 
+// Semantic
 $info: #5c7a8d;
 $success: #5e8c61;
 $warning: #d98c3a;
 $error: #a94438;
+
+// ─── Spacing (4px base unit) ──────────────────────────────────────────────────
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-8: 32px;
+$space-10: 40px;
+$space-12: 48px;
+$space-16: 64px;
+
+// ─── Typography ───────────────────────────────────────────────────────────────
+$font-display: "Playfair Display", Georgia, serif;
+$font-body: "Inter", system-ui, sans-serif;
+$font-caveat: "Caveat", cursive;
+
+// Font sizes
+$text-xs: 12px;
+$text-sm: 14px;
+$text-base: 16px;
+$text-lg: 18px;
+$text-xl: 20px;
+$text-2xl: 24px;
+$text-3xl: 30px;
+$text-4xl: 36px;
+$text-5xl: 48px;
+$text-6xl: 64px;
+
+// Font weights
+$weight-regular: 400;
+$weight-bold: 700;
+$weight-extrabold: 800;
+$weight-black: 900;
+
+// Line heights
+$leading-tight: 1.1;
+$leading-snug: 1.35;
+$leading-normal: 1.55;
+$leading-relaxed: 1.65;
+
+// Letter spacing
+$tracking-tight: -0.03em;
+$tracking-normal: 0;
+$tracking-wide: 0.06em;
+$tracking-wider: 0.1em;
+
+// ─── Shadows ──────────────────────────────────────────────────────────────────
+$shadow-sm: 0 2px 8px rgba($road-black, 0.06);
+$shadow-md: 0 8px 24px rgba($road-black, 0.1);
+$shadow-lg: 0 14px 40px rgba($road-black, 0.14);
+$shadow-xl: 0 24px 60px rgba($road-black, 0.18);
+
+// ─── Border Radius ────────────────────────────────────────────────────────────
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-xl: 28px;
+$radius-pill: 999px;
+
+// ─── Transitions ──────────────────────────────────────────────────────────────
+$transition-fast: 120ms ease;
+$transition-base: 180ms ease;
+$transition-slow: 300ms ease;
+
+// ─── CSS Custom Properties on :root ──────────────────────────────────────────
+:root {
+  --rd-road-black: #{$road-black};
+  --rd-dust-white: #{$dust-white};
+  --rd-faded-sand: #{$faded-sand};
+  --rd-burnt-orange: #{$burnt-orange};
+  --rd-muted-rust: #{$muted-rust};
+  --rd-asphalt-gray: #{$asphalt-gray};
+  --rd-info: #{$info};
+  --rd-success: #{$success};
+  --rd-warning: #{$warning};
+  --rd-error: #{$error};
+  --rd-space-1: #{$space-1};
+  --rd-space-2: #{$space-2};
+  --rd-space-3: #{$space-3};
+  --rd-space-4: #{$space-4};
+  --rd-space-5: #{$space-5};
+  --rd-space-6: #{$space-6};
+  --rd-space-8: #{$space-8};
+  --rd-space-10: #{$space-10};
+  --rd-space-12: #{$space-12};
+  --rd-space-16: #{$space-16};
+  --rd-font-display: #{$font-display};
+  --rd-font-body: #{$font-body};
+  --rd-font-caveat: #{$font-caveat};
+  --rd-shadow-sm: #{$shadow-sm};
+  --rd-shadow-md: #{$shadow-md};
+  --rd-shadow-lg: #{$shadow-lg};
+  --rd-shadow-xl: #{$shadow-xl};
+  --rd-radius-sm: #{$radius-sm};
+  --rd-radius-md: #{$radius-md};
+  --rd-radius-lg: #{$radius-lg};
+  --rd-radius-xl: #{$radius-xl};
+  --rd-radius-pill: #{$radius-pill};
+  --rd-transition-fast: #{$transition-fast};
+  --rd-transition-base: #{$transition-base};
+  --rd-transition-slow: #{$transition-slow};
+}
