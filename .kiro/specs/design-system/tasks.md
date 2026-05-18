@@ -115,7 +115,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add stories: Unchecked, Checked, Disabled — use "Remember me" as the label
   - **Requirements**: 15.1, 15.2, 15.3, 15.4, 15.5, 15.6, 15.7
 
-- [ ] 8. Build Chip component
+- [x] 8. Build Chip component
   - Create `src/components/Chip/Chip.jsx` with `label`, `active`, `icon`, and `onToggle` props
   - Render as `<button>` with `aria-pressed={active}`
   - Call `onToggle(!active)` on click
