@@ -1,0 +1,124 @@
+@use "../theme" as t;
+
+@keyframes rd-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rd-button {
+  display: inline-flex;
+  align-items: center;
+  gap: t.$space-2;
+  border: none;
+  border-radius: t.$radius-pill;
+  font-family: t.$font-body;
+  font-weight: t.$weight-bold;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform t.$transition-base,
+    box-shadow t.$transition-base;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: t.$shadow-md;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid t.$burnt-orange;
+    outline-offset: 3px;
+  }
+
+  // ── Sizes ──────────────────────────────────────────────────────────────────
+
+  &--sm {
+    padding: t.$space-2 t.$space-4;
+    font-size: t.$text-sm;
+  }
+
+  &--md {
+    padding: t.$space-3 t.$space-6;
+    font-size: t.$text-base;
+  }
+
+  &--lg {
+    padding: t.$space-4 t.$space-8;
+    font-size: t.$text-lg;
+  }
+
+  // ── Variants ───────────────────────────────────────────────────────────────
+
+  &--primary {
+    background: t.$burnt-orange;
+    color: t.$dust-white;
+  }
+
+  &--dark {
+    background: t.$road-black;
+    color: t.$dust-white;
+  }
+
+  &--secondary {
+    background: t.$faded-sand;
+    color: t.$road-black;
+  }
+
+  &--ghost {
+    background: white;
+    border: 1px solid t.$faded-sand;
+    color: t.$road-black;
+  }
+
+  &--danger {
+    background: t.$error;
+    color: t.$dust-white;
+  }
+
+  // ── States ─────────────────────────────────────────────────────────────────
+
+  &--disabled,
+  &:disabled {
+    background: t.$asphalt-gray;
+    color: t.$faded-sand;
+    cursor: not-allowed;
+    opacity: 0.6;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &--loading {
+    cursor: wait;
+  }
+
+  // ── Sub-elements ───────────────────────────────────────────────────────────
+
+  &__label {
+    line-height: 1;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__spinner {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: rd-spin 0.6s linear infinite;
+  }
+}
