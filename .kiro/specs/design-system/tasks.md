@@ -216,7 +216,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Use brand-voice copy (e.g., "Route saved. Let's get you on the road.")
   - **Requirements**: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6
 
-- [ ] 17. Build ItineraryStopItem component
+- [x] 17. Build ItineraryStopItem component
   - Create `src/components/ItineraryStopItem/ItineraryStopItem.jsx` with `stopNumber`, `name`, `time`, `category`, `rating`, and `hiddenGem` props
   - Render as `<li>` element
   - Render `stopNumber` as filled Road Black circle on the left edge

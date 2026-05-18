@@ -1,1 +1,88 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+// ─── ItineraryStopItem ────────────────────────────────────────────────────────
+// A single stop row in a route's day-by-day list. Render multiple items
+// inside a <ul> or <ol> container.
+
+.rd-itinerary-stop {
+  display: flex;
+  gap: t.$space-4;
+  padding: t.$space-4 0;
+  border-bottom: 1px solid t.$faded-sand;
+  list-style: none;
+
+  // ── Number marker ───────────────────────────────────────────────────────────
+  &__number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: t.$road-black;
+    color: t.$dust-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    font-weight: t.$weight-bold;
+    flex-shrink: 0;
+  }
+
+  // ── Content area ────────────────────────────────────────────────────────────
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  // ── Header row: name + time ─────────────────────────────────────────────────
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: t.$space-3;
+  }
+
+  &__name {
+    font-family: t.$font-body;
+    font-weight: t.$weight-bold;
+    font-size: t.$text-base;
+    color: t.$road-black;
+  }
+
+  &__time {
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    color: t.$asphalt-gray;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  // ── Meta row: badge + rating ────────────────────────────────────────────────
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: t.$space-3;
+    margin-top: t.$space-2;
+  }
+
+  &__rating {
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    color: t.$burnt-orange;
+    letter-spacing: 0.05em;
+  }
+
+  // ── Hidden gem callout ──────────────────────────────────────────────────────
+  &__gem {
+    display: flex;
+    align-items: center;
+    gap: t.$space-2;
+    margin-top: t.$space-2;
+    padding: t.$space-2 t.$space-3;
+    background: rgba(t.$burnt-orange, 0.08);
+    border-radius: t.$radius-sm;
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    color: t.$muted-rust;
+    line-height: t.$leading-normal;
+  }
+}

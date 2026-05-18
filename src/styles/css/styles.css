@@ -1015,6 +1015,76 @@ body {
   margin: 0;
 }
 
+.rd-itinerary-stop {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #d9d1c7;
+  list-style: none;
+}
+.rd-itinerary-stop__number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: #f4f1ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.rd-itinerary-stop__content {
+  flex: 1;
+  min-width: 0;
+}
+.rd-itinerary-stop__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.rd-itinerary-stop__name {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+.rd-itinerary-stop__time {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  color: #2f2f2f;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rd-itinerary-stop__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.rd-itinerary-stop__rating {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  color: #c4512d;
+  letter-spacing: 0.05em;
+}
+.rd-itinerary-stop__gem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(196, 81, 45, 0.08);
+  border-radius: 6px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  color: #a65a3a;
+  line-height: 1.55;
+}
+
 .rd-toast {
   display: inline-flex;
   align-items: center;
@@ -1082,3 +1152,5 @@ body {
   outline-offset: 3px;
   border-radius: 6px;
 }
+
+/*# sourceMappingURL=styles.css.map */
