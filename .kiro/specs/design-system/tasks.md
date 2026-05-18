@@ -77,7 +77,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Use brand-voice copy in story args (e.g., "Build Your Route", "Log In", "Next Step →")
   - **Requirements**: 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11
 
-- [ ] 5. Build Badge component
+- [x] 5. Build Badge component
   - Create `src/components/Badge/Badge.jsx` with `label` and `variant` props
   - Support variants: `default`, `primary`, `success`, `warning`, `error`, `info`
   - Render as `<span>` with pill border-radius using `$radius-pill`
