@@ -170,7 +170,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add a `Row` story showing three StatBlocks side by side: "DRIVING 4h 20m", "DISTANCE 210 mi", "STOPS 4"
   - **Requirements**: 22.1, 22.2, 22.3, 22.4
 
-- [ ] 13. Update Accordion and Alert stories
+- [x] 13. Update Accordion and Alert stories
   - Update `src/components/Accordion/Accordion.stories.js`: add `AllClosed` story (openIndex starts null) and `SingleItem` story
   - Change Accordion story title from `'Atom/Accordion'` (existing typo — singular, wrong category) to `'Organisms/Accordion'`
   - Update `src/components/Alert/Alert.stories.js`: add `Error` story, `WithActions` story, and `WithClose` story
