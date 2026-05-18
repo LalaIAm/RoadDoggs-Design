@@ -202,7 +202,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add stories: Default, WithImage, Interactive, Trip, Draft
   - **Requirements**: 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9
 
-- [ ] 16. Build Toast component
+- [x] 16. Build Toast component
   - Create `src/components/Toast/Toast.jsx` with `variant`, `message`, `duration`, and `onDismiss` props
   - Render fixed-position at bottom-right of viewport
   - Apply variant-specific background colors using semantic tokens

@@ -1,1 +1,82 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+.rd-toast {
+  display: inline-flex;
+  align-items: center;
+  gap: t.$space-3;
+  padding: t.$space-3 t.$space-5;
+  border-radius: t.$radius-pill;
+  box-shadow: t.$shadow-lg;
+  max-width: 480px;
+  font-family: t.$font-body;
+
+  // ── Variants ────────────────────────────────────────────────────────────────
+  &--info {
+    background: t.$road-black;
+    color: t.$dust-white;
+  }
+
+  &--success {
+    background: t.$success;
+    color: t.$dust-white;
+  }
+
+  &--warning {
+    background: t.$warning;
+    color: t.$road-black;
+  }
+
+  &--error {
+    background: t.$error;
+    color: t.$dust-white;
+  }
+
+  // ── Elements ─────────────────────────────────────────────────────────────────
+  &__icon {
+    flex-shrink: 0;
+    font-size: t.$text-base;
+    line-height: 1;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    margin: 0 0 t.$space-1;
+    font-size: t.$text-sm;
+    font-weight: t.$weight-bold;
+    line-height: t.$leading-snug;
+  }
+
+  &__message {
+    margin: 0;
+    font-size: t.$text-sm;
+    line-height: t.$leading-normal;
+  }
+
+  &__dismiss {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+    margin-left: t.$space-2;
+    padding: 0;
+    font-size: t.$text-base;
+    line-height: 1;
+    transition: opacity t.$transition-base;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 3px;
+      border-radius: t.$radius-sm;
+    }
+  }
+}
