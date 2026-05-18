@@ -1,5 +1,6 @@
-import { fn } from "storybook/test";
+import React, { fn } from "storybook/test";
 import Alert from "./Alert";
+import {jsx as _jsx } from 'react/jsx-runtime'
 
 export default {
   title: "Atoms/Alert",

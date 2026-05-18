@@ -1,3 +1,4 @@
+import React from 'react'
 import StatBlock from "./StatBlock";
 import Icon from "../Icon/Icon";
 
