@@ -745,6 +745,47 @@ body {
   cursor: not-allowed;
 }
 
+.rd-stat-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.rd-stat-block__icon {
+  color: #c4512d;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.rd-stat-block__content {
+  display: flex;
+  flex-direction: column;
+}
+.rd-stat-block__label {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2f2f2f;
+  line-height: 1.55;
+}
+.rd-stat-block__value {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.1;
+}
+.rd-stat-block__unit {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin-left: 4px;
+  vertical-align: super;
+  line-height: 1;
+}
+
 .rd-stepper-input {
   display: flex;
   align-items: center;

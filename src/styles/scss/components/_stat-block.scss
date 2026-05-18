@@ -1,1 +1,47 @@
-// Placeholder — styles added in component task
+@use "../theme" as t;
+
+.rd-stat-block {
+  display: inline-flex;
+  align-items: center;
+  gap: t.$space-2;
+
+  &__icon {
+    color: t.$burnt-orange;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-family: t.$font-body;
+    font-size: t.$text-xs;
+    font-weight: t.$weight-bold;
+    text-transform: uppercase;
+    letter-spacing: t.$tracking-wider;
+    color: t.$asphalt-gray;
+    line-height: t.$leading-normal;
+  }
+
+  &__value {
+    font-family: t.$font-body;
+    font-size: t.$text-lg;
+    font-weight: t.$weight-bold;
+    color: t.$road-black;
+    line-height: t.$leading-tight;
+  }
+
+  &__unit {
+    font-family: t.$font-body;
+    font-size: t.$text-sm;
+    font-weight: t.$weight-bold;
+    color: t.$asphalt-gray;
+    margin-left: t.$space-1;
+    vertical-align: super;
+    line-height: 1;
+  }
+}

@@ -161,7 +161,7 @@ Build the RoadDoggs Design System — a living component library on React 19, SC
   - Add stories: Empty, WithValue (showing clear button)
   - **Requirements**: 24.1, 24.2, 24.3, 24.4, 24.5, 24.6, 24.7
 
-- [ ] 12. Build StatBlock component
+- [x] 12. Build StatBlock component
   - Create `src/components/StatBlock/StatBlock.jsx` with `label`, `value`, and `icon` props
   - Render label in small uppercase Inter text above the value
   - Render optional icon to the left of the label/value pair
